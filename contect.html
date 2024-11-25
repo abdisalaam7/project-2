@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coffe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+ .header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+ .header .logo {
+    display: flex;
+    width: 100px;
+    cursor: pointer;
+    margin: 7px 0;
+}
+
+ .header .logo i{
+    font-size: 2em;
+}
+ .header .logo h1{
+    font-size: 1.7em;
+    margin-left: 10px;
+}
+
+ .header ul{
+    list-style: none;
+}
+
+ .header ul li{
+    display: inline-block;
+    margin: 0 15px;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 1.7em;
+
+}
+
+ .header ul a li{
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 1.7em;
+    transition: 0.1s;
+
+}
+
+ .header ul a li::after{ 
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    transition: 0.2s linear;
+
+}
+ .header ul a li:hover:after{
+    width: 100%;
+
+}
+
+ .header ul a li:hover:after{
+    color: #fac031;
+}
+
+.header .icon {
+    font-size: 25px;
+    color: #000;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header .icon  i:hover{
+    color: #fac031;
+}
+
+
+        
+.order{
+    width: 100%;
+    height: 100%;
+    padding: 70px 0;
+    background-image: url(./img/pexels-chevanon-302902.jpg);
+    background-position:center ;
+    background-size: cover;
+}
+
+.order h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 55px;
+}
+
+.order h1 span{
+    color: #fac031;
+    margin-right: 15px;
+    font-family: mv boli;
+}
+
+.order h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.order .order_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.order .order_main .order_image img{
+    width: 600px;
+}
+
+.order .order_main form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 10px;
+}
+
+.order .order_main form .input p{
+    line-height: 25px;
+}
+
+.order .order_main form .input{
+    margin: 5px;
+}
+
+.order .order_main form .input input{
+    width: 300px;
+    height: 35px;
+    padding: 0 10px;
+    border: 2px solid #cccccc;
+    background: #eeeeee;
+    outline: none;
+    border-radius: 3px;
+}
+
+.order .order_main form .input input:focus{
+    border: 2px solid #fac031;
+}
+
+.order .order_main form .order_btn{
+    padding: 10px 0;
+    background: #fac031;
+    color: white;
+    width: 40%;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+     .order {
+            padding: 70px 0;
+            background-image: url(./img/pexels-chevanon-302902.jpg);
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+            color: #000;
+        }
+
+        .order h1 {
+            font-size: 2.5em;
+            color: #000;
+        }
+
+        .order h1 span {
+            color: #fac031;
+            font-family: 'MV Boli', sans-serif;
+        }
+
+        .order_main {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .order_image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .input p {
+            margin-bottom: 5px;
+            color: orange;
+            font-size: 1.2em;
+        }
+
+        .input input {
+            width: 100%;
+            padding: 8px;
+            border: 2px solid #cccccc;
+            background: #eeeeee;
+            outline: none;
+            border-radius: 3px;
+        }
+
+        .input input:focus {
+            border-color: #fac031;
+        }
+
+        .order_btn {
+            grid-column: span 2;
+            padding: 10px;
+            background: #fac031;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .order_btn:hover {
+            background: #e6a823;
+        }
+    
+
+
+        
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.footer-container > div {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.footer-about h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-about p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-links h3, .footer-contact h3, .footer-social h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #ff5722;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-social .social-icons a {
+    color: #ddd;
+    font-size: 18px;
+    margin: 0 10px;
+    transition: color 0.3s;
+    display: inline-block;
+}
+
+.footer-social .social-icons a:hover {
+    color: #ff5722;
+}
+
+.footer-bottom {
+    background-color: #111;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+            .footer-container {
+                justify-content: space-around;
+            }
+            .footer-container > div {
+                flex: 1 1 250px;
+                margin: 10px;
+            }
+            .order_main {
+                flex-direction: column;
+                gap: 20px;
+            }
+            form {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header ul {
+                display: none;
+            }
+            .header {
+                justify-content: space-between;
+            }
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-container > div {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header .logo h1 {
+                font-size: 1.3em;
+            }
+            .order h1 {
+                font-size: 2em;
+            }
+            .order h1 span {
+                font-size: 1.2em;
+            }
+            .footer-about h2,
+            .footer-links h3,
+            .footer-contact h3,
+            .footer-social h3 {
+                font-size: 16px;
+            }
+            .footer-about p,
+            .footer-contact p {
+                font-size: 12px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+     
+    <div class="header">
+        <div class="logo">
+        <i class="fa-solid fa-mug-saucer"></i>
+        <h1>coffee</h1>
+    </div>
+        <ul>
+            <a href="index.html"><li>Home</li></a>
+            <a href="main.html"><li>main</li></a>
+            <a href="contect.html"><li>contect</li></a>
+        </ul>
+        
+        <div class="icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+    </div>
+
+    
+
+    <div class="order" id="Order">
+        <h1><span>Order</span>Now</h1>
+
+        <div class="order_main">
+
+            <div class="order_image">
+                <img src="img/order_image.png">
+            </div>
+
+            <form action="#">
+
+                <div class="input">
+                    <p>Name</p>
+                    <input type="text" placeholder="you name">
+                </div>
+
+                <div class="input">
+                    <p>Email</p>
+                    <input type="email" placeholder="you email">
+                </div>
+
+                <div class="input">
+                    <p>Number</p>
+                    <input placeholder="you number">
+                </div>
+
+                <div class="input">
+                    <p>How Much</p>
+                    <input type="number" placeholder="how many order">
+                </div>
+
+                <div class="input">
+                    <p>You Order</p>
+                    <input placeholder="food name">
+                </div>
+
+                <div class="input">
+                    <p>Address</p>
+                    <input placeholder="you Address">
+                </div>
+
+                <a href="#" class="order_btn">Order Now</a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- footer -->
+
+    
+    <footer>
+        <div class="footer-container">
+            <!-- Logo and About -->
+            <div class="footer-about">
+                <h2>Company Name</h2>
+                <p>We are a company dedicated to providing the best service and quality products to our customers. Connect with us on our social platforms.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: contact@company.com</p>
+                <p>Phone: +123 456 7890</p>
+                <p>Address: 123 Street, City, Country</p>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Company Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for icons (CDN link) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+
+
+    
+</body>
+</html>
